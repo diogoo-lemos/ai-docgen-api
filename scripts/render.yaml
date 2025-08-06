@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-docgen-api
+    env: docker
+    repo: https://github.com/diogoo-lemos/ai-docgen-api
+    branch: main
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+    healthCheckPath: /docs
